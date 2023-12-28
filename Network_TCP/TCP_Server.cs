@@ -56,10 +56,8 @@ namespace Network_TCP
             string status;
             string ip = "127.0.0.1";
             int port = 12345;
-            bool mode = false;
             bool listenOrNot = false;
-            int index = 0;
-            if (!DA.GetData(0, ref ip) || !DA.GetData(1, ref port) || !DA.GetData(2, ref listenOrNot) || !DA.GetData(3, ref textToSend) || !DA.GetData(4, ref mode) || !DA.GetData(5, ref index)) return;
+            if (!DA.GetData(0, ref ip) || !DA.GetData(1, ref port) || !DA.GetData(2, ref listenOrNot) || !DA.GetData(3, ref textToSend)) return;
             if (listenOrNot == true)
             {
                 // Create the server if there isn't.
